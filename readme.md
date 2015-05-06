@@ -15,8 +15,8 @@ $ npm install --save github-user-email
 ```js
 var githubUserEmail = require('github-user-email');
 
-githubUserEmail('johndoe', function (err, mail) {
-	console.log(mail);
+githubUserEmail('johndoe', function (err, email) {
+	console.log(email);
 	//=> 'johndoe@gmail.com'
 });
 ```

@@ -9,7 +9,7 @@ var cli = meow({
 		'Example',
 		'  $ github-user-email johndoe',
 		'  johndoe@gmail.com'
-	].join('\n')
+	]
 });
 
 if (!cli.input[0]) {

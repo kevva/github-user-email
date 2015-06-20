@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 'use strict';
-
 var meow = require('meow');
 var githubUserEmail = require('./');
 
@@ -12,7 +11,7 @@ var cli = meow({
 	]
 });
 
-if (!cli.input[0]) {
+if (!cli.input.length) {
 	console.error('User required');
 	process.exit(1);
 }

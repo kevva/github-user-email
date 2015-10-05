@@ -16,7 +16,7 @@
     "github-user-email": "cli.js"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "xo && ava"
   },
   "files": [
     "cli.js",
@@ -30,10 +30,17 @@
     "user"
   ],
   "dependencies": {
-    "gh-got": "^1.0.3",
-    "meow": "^3.3.0"
+    "gh-got": "^2.0.1",
+    "meow": "^3.4.1",
+    "pinkie-promise": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
   }
 }

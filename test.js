@@ -1,12 +1,7 @@
-'use strict';
-var test = require('ava');
-var githubUserEmail = require('./');
+import test from 'ava';
+import fn from './';
 
-test(function (t) {
-	t.plan(2);
-
-	githubUserEmail('kevva', function (err, data) {
-		t.assert(!err, err);
-		t.assert(data === 'kevinmartensson@gmail.com', data);
-	});
+test(async t => {
+	const mail = await fn('kevva');
+	t.is(mail, 'kevinmartensson@gmail.com');
 });

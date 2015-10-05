@@ -1,11 +1,7 @@
 import test from 'ava';
-import githubUserEmail from './';
+import fn from './';
 
-test(t => {
-	t.plan(2);
-
-	githubUserEmail('kevva', (err, data) => {
-		t.ifError(err);
-		t.is(data, 'kevinmartensson@gmail.com');
-	});
+test(async t => {
+	const mail = await fn('kevva');
+	t.is(mail, 'kevinmartensson@gmail.com');
 });

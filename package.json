@@ -30,11 +30,17 @@
     "user"
   ],
   "dependencies": {
-    "gh-got": "^1.0.3",
-    "meow": "^3.4.1"
+    "gh-got": "^2.0.1",
+    "meow": "^3.4.1",
+    "pinkie-promise": "^1.0.0"
   },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
   }
 }

@@ -14,11 +14,6 @@ if (!cli.input.length) {
 	process.exit(1);
 }
 
-githubUserEmail(cli.input[0], function (err, email) {
-	if (err) {
-		console.error(err.message);
-		process.exit(1);
-	}
-
+githubUserEmail(cli.input[0]).then(function (email) {
 	console.log(email);
 });

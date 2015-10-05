@@ -3,13 +3,11 @@
 var meow = require('meow');
 var githubUserEmail = require('./');
 
-var cli = meow({
-	help: [
-		'Example',
-		'  $ github-user-email johndoe',
-		'  johndoe@gmail.com'
-	]
-});
+var cli = meow([
+	'Example',
+	'  $ github-user-email johndoe',
+	'  johndoe@gmail.com'
+]);
 
 if (!cli.input.length) {
 	console.error('User required');

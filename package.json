@@ -16,7 +16,7 @@
     "github-user-email": "cli.js"
   },
   "scripts": {
-    "test": "xo && node test.js"
+    "test": "xo && ava"
   },
   "files": [
     "cli.js",
@@ -34,7 +34,7 @@
     "meow": "^3.4.1"
   },
   "devDependencies": {
-    "ava": "0.0.4",
+    "ava": "*",
     "xo": "*"
   }
 }

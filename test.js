@@ -1,12 +1,11 @@
-'use strict';
-var test = require('ava');
-var githubUserEmail = require('./');
+import test from 'ava';
+import githubUserEmail from './';
 
-test(function (t) {
+test(t => {
 	t.plan(2);
 
-	githubUserEmail('kevva', function (err, data) {
-		t.assert(!err, err);
-		t.assert(data === 'kevinmartensson@gmail.com', data);
+	githubUserEmail('kevva', (err, data) => {
+		t.ifError(err);
+		t.is(data, 'kevinmartensson@gmail.com');
 	});
 });

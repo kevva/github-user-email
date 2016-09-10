@@ -1,13 +1,10 @@
 'use strict';
-var ghGot = require('gh-got');
-var Promise = require('pinkie-promise');
+const ghGot = require('gh-got');
 
-module.exports = function (user, opts) {
+module.exports = (user, opts) => {
 	if (typeof user !== 'string') {
-		return Promise.reject(new Error('User required'));
+		return Promise.reject(new TypeError(`Expected a \`string\`, got \`${typeof user}\``));
 	}
 
-	return ghGot('users/' + user, opts).then(function (data) {
-		return data.body.email;
-	});
+	return ghGot(`users/${user}`, opts).then(data => data.body.email);
 };

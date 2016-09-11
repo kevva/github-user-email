@@ -22,19 +22,9 @@ githubUserEmail('johndoe').then(email => {
 ```
 
 
-## CLI
+## Related
 
-```
-$ npm install --global github-user-email
-```
-
-```
-$ github-user-email --help
-
-  Example
-    github-user-email johndoe
-    johndoe@gmail.com
-```
+* [github-user-email-cli](https://github.com/kevva/github-user-email-cli) - CLI for this module
 
 
 ## License
